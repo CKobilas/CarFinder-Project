@@ -13,7 +13,8 @@ def display_menu():
   AutoCountry Vehicle Finder v0.2\n************************************")
   print("\n1. PRINT all Authorized Vehicles")
   print("2. SEARCH for Authorized Vehicle")
-  print("3. Exit")
+  print("3. ADD Authorized Vehicle")
+  print("4. Exit")
 
 # Define function to get user input on searched vehicle
 def search_vehicle():
@@ -22,6 +23,15 @@ def search_vehicle():
     print(search, "is an authorized vehicle")
   else:
     print(search, "is not an authorized vehicle, if you received this in error please check the spelling and try again")
+
+# Define function to add vehicle to list
+def add_vehicle():
+  new_vehicle = input("\nPlease Enter the full Vehicle name you would like to add: ")
+  if new_vehicle in Allowed_Vehicles_List:
+    print(new_vehicle, "is already an authorized vehicle")
+  else:
+    Allowed_Vehicles_List.append(new_vehicle)
+  return new_vehicle
   
 # Define main function
 def main():
@@ -33,6 +43,9 @@ def main():
         elif choice == '2':
             search_vehicle()
         elif choice == '3':
+            new_vehicle = add_vehicle()
+            print("\nYou have added " + new_vehicle + " as an authorized vehicle")
+        elif choice == '4':
             print("\nThank you for using the AutoCountry Vehicle Finder, good-bye!")
             break
         else:
