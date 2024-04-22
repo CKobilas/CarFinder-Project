@@ -19,16 +19,6 @@ def print_allowed_vehicles():
     print("\nThe AutoCountry sales manager has authorized the purchase and selling of the following vehicles:")
     for vehicle in allowed_vehicles:
         print(vehicle)
-      
-# Define function to display menu
-def display_menu():
-  print("\n************************************\n\
-  AutoCountry Vehicle Finder v0.5\n************************************")
-  print("\n1. PRINT all Authorized Vehicles")
-  print("2. SEARCH for Authorized Vehicle")
-  print("3. ADD Authorized Vehicle")
-  print("4. DELETE Authorized Vehicle")
-  print("5. Exit")
 
 # Define function to get user input on searched vehicle
 def search_vehicle():
@@ -62,7 +52,17 @@ def delete_vehicle():
       print("You have REMOVED " + delete_vehicle + " as an authorized vehicle")
     else:
         print(delete_vehicle, "is not in the authorized vehicles list.")
-  
+      
+# Define function to display menu
+def display_menu():
+  print("\n************************************\n\
+  AutoCountry Vehicle Finder v0.6\n************************************")
+  print("\n1. PRINT all Authorized Vehicles")
+  print("2. SEARCH for Authorized Vehicle")
+  print("3. ADD Authorized Vehicle")
+  print("4. DELETE Authorized Vehicle")
+  print("5. Exit")
+ 
 # Define main function
 def main():
     while True:
